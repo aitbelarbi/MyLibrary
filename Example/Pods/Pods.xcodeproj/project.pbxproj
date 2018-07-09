@@ -7,9 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		131A834820EFA92B0013E945 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 131A834720EFA92B0013E945 /* Service.swift */; };
-		133C08B420F3528F00BFED31 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133C08B320F3528F00BFED31 /* User.swift */; };
-		133C08B520F38B3600BFED31 /* AudioHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 131A834520EFA8500013E945 /* AudioHelper.swift */; };
+		133C08B920F38C6000BFED31 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133C08B620F38C5F00BFED31 /* Service.swift */; };
+		133C08BA20F38C6000BFED31 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133C08B720F38C5F00BFED31 /* User.swift */; };
+		133C08BB20F38C6000BFED31 /* ReplaceMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133C08B820F38C6000BFED31 /* ReplaceMe.swift */; };
+		133C08BD20F38C6F00BFED31 /* AudioHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133C08BC20F38C6F00BFED31 /* AudioHelper.swift */; };
 		2956CB8AC826644794F92C016BB4E349 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
 		2F681C815D609C1885406AC46A41CA42 /* Pods-MyLibrary_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C05F758AAF3EF36309311FDB64E58C4 /* Pods-MyLibrary_Tests-dummy.m */; };
 		39273CBF5A088DB02C0E843B9006289A /* Pods-MyLibrary_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1F6995543FA2E2227B61128C382C3C7F /* Pods-MyLibrary_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -31,9 +32,10 @@
 
 /* Begin PBXFileReference section */
 		0D6D22A4824507DA462184E02F33F465 /* Pods_MyLibrary_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyLibrary_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		131A834520EFA8500013E945 /* AudioHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioHelper.swift; sourceTree = "<group>"; };
-		131A834720EFA92B0013E945 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
-		133C08B320F3528F00BFED31 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		133C08B620F38C5F00BFED31 /* Service.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Service.swift; path = MyLibrary/Classes/Service.swift; sourceTree = "<group>"; };
+		133C08B720F38C5F00BFED31 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = User.swift; path = MyLibrary/Classes/User.swift; sourceTree = "<group>"; };
+		133C08B820F38C6000BFED31 /* ReplaceMe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ReplaceMe.swift; path = MyLibrary/Classes/ReplaceMe.swift; sourceTree = "<group>"; };
+		133C08BC20F38C6F00BFED31 /* AudioHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AudioHelper.swift; path = MyLibrary/Classes/AudioHelper.swift; sourceTree = "<group>"; };
 		1F6995543FA2E2227B61128C382C3C7F /* Pods-MyLibrary_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-MyLibrary_Tests-umbrella.h"; sourceTree = "<group>"; };
 		23F196ECA8632AC2FE356FC72D4FA5B3 /* MyLibrary.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = MyLibrary.modulemap; sourceTree = "<group>"; };
 		3010EACDFB1325CCE6D1AEBB9E14DAEB /* MyLibrary-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MyLibrary-umbrella.h"; sourceTree = "<group>"; };
@@ -152,9 +154,10 @@
 			isa = PBXGroup;
 			children = (
 				FCCD726F4FAD103D78EF642D2A4D02CA /* ReplaceMe.swift */,
-				133C08B320F3528F00BFED31 /* User.swift */,
-				131A834520EFA8500013E945 /* AudioHelper.swift */,
-				131A834720EFA92B0013E945 /* Service.swift */,
+				133C08B820F38C6000BFED31 /* ReplaceMe.swift */,
+				133C08B620F38C5F00BFED31 /* Service.swift */,
+				133C08B720F38C5F00BFED31 /* User.swift */,
+				133C08BC20F38C6F00BFED31 /* AudioHelper.swift */,
 				08014B7374159B040DB859F023EE68B1 /* Pod */,
 				39D2AAFE4FB9A9DB41D74FB0F6C567A0 /* Support Files */,
 			);
@@ -284,11 +287,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				133C08B420F3528F00BFED31 /* User.swift in Sources */,
+				133C08BD20F38C6F00BFED31 /* AudioHelper.swift in Sources */,
+				133C08BA20F38C6000BFED31 /* User.swift in Sources */,
 				CED96E4ADABD0A4A0207E77AC482AE5C /* MyLibrary-dummy.m in Sources */,
 				733E90700DA0BFD92384289DB000E7F9 /* ReplaceMe.swift in Sources */,
-				131A834820EFA92B0013E945 /* Service.swift in Sources */,
-				133C08B520F38B3600BFED31 /* AudioHelper.swift in Sources */,
+				133C08B920F38C6000BFED31 /* Service.swift in Sources */,
+				133C08BB20F38C6000BFED31 /* ReplaceMe.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
