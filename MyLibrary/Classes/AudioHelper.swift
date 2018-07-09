@@ -38,12 +38,12 @@ public class AudioHelper: NSObject, AVAudioRecorderDelegate, ServiceDelegate, AV
     public var microphoneLevelSilenceThreshold: Float = -30
     private var startListening: Bool = false
     private var isSpeaking: Bool = false
-    var isEnrollEnable: Bool = false
-    var isIdentity = false
+    public var isEnrollEnable: Bool = false
+    public var isIdentity = false
     
-    var delegate: AudioHelperDelegate?
+    public var delegate: AudioHelperDelegate?
     
-    func recordPermission() {
+    public func recordPermission() {
         recordingSession = AVAudioSession.sharedInstance()
         do {
             try recordingSession.setCategory(AVAudioSessionCategoryPlayAndRecord)
@@ -62,7 +62,7 @@ public class AudioHelper: NSObject, AVAudioRecorderDelegate, ServiceDelegate, AV
         }
     }
     
-    func startRecording(isIdentity: Bool) {
+    public func startRecording(isIdentity: Bool) {
         self.isIdentity = isIdentity
         
         let audioFilename = getDocumentsDirectory().appendingPathComponent("recording.wav")
@@ -98,7 +98,7 @@ public class AudioHelper: NSObject, AVAudioRecorderDelegate, ServiceDelegate, AV
         return paths[0]
     }
     
-    func finishRecording(success: Bool) {
+    public  func finishRecording(success: Bool) {
         delegate?.recordingStoped()
         audioRecorder.stop()
         Service.shared.delegate = self
@@ -150,7 +150,7 @@ public class AudioHelper: NSObject, AVAudioRecorderDelegate, ServiceDelegate, AV
     }
     
     //MARK :- ServiceDelegate
-    func playSound(data: Data, startListening: Bool) {
+    public func playSound(data: Data, startListening: Bool) {
         do {
             try recordingSession.overrideOutputAudioPort(AVAudioSessionPortOverride.speaker)
             audioPlayer = try AVAudioPlayer(data: data)
@@ -164,16 +164,16 @@ public class AudioHelper: NSObject, AVAudioRecorderDelegate, ServiceDelegate, AV
         }
     }
     
-    func showError() {
+    public func showError() {
         delegate?.serverError()
     }
     
-    func serverRecordSuccess() {
+    public func serverRecordSuccess() {
         delegate?.serverSuccess()
     }
     
     //MARK :- AVAudioPlayerDelegate
-    func audioPlayerDidFinishPlaying(_ player: AVAudioPlayer, successfully flag: Bool) {
+    public func audioPlayerDidFinishPlaying(_ player: AVAudioPlayer, successfully flag: Bool) {
         if startListening {
             startRecording(isIdentity: isIdentity)
         }

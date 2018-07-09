@@ -32,7 +32,7 @@ public class Service {
     private var lastname: String = ""
     private var userId: String = ""
     
-    func getResponse(url: URL) {
+    public func getResponse(url: URL) {
         var r  = URLRequest(url: URL(string: "\(baseUrl)/ms_chappie/inquiries")!)
         r.httpMethod = "POST"
         let boundary = "Boundary-\(UUID().uuidString)"
@@ -70,7 +70,7 @@ public class Service {
         task.resume()
     }
     
-    func getUser(username: String? = "", success: @escaping ((_ users: [User]) -> Void), failed: @escaping (() -> Void)) {
+    public func getUser(username: String? = "", success: @escaping ((_ users: [User]) -> Void), failed: @escaping (() -> Void)) {
         if username != "" {
             self.username = username!
         }
@@ -96,7 +96,7 @@ public class Service {
             })
     }
     
-    func setEnrollUser(url: URL) {
+    public func setEnrollUser(url: URL) {
         print("url : \(baseUrl)/users/\(username)/enrollments")
         
         var r  = URLRequest(url: URL(string: "\(baseUrl)/ms_chappie/users/\(username)/enrollments")!)
@@ -130,7 +130,7 @@ public class Service {
         task.resume()
     }
     
-    func createEnrollUser(username: String, firstname: String, lastname: String, success: @escaping ((_ showAlert: Bool) -> Void), failed: @escaping (() -> Void)) {
+    public func createEnrollUser(username: String, firstname: String, lastname: String, success: @escaping ((_ showAlert: Bool) -> Void), failed: @escaping (() -> Void)) {
         
         self.firstname = firstname
         self.lastname = lastname
@@ -179,7 +179,7 @@ public class Service {
         })
     }
     
-    func deleteEnrollUser(userId: String? = "", success: @escaping (() -> Void), failed: @escaping (() -> Void)) {
+    public func deleteEnrollUser(userId: String? = "", success: @escaping (() -> Void), failed: @escaping (() -> Void)) {
         
         if userId != "" {
             self.userId = userId!
@@ -208,7 +208,7 @@ public class Service {
             })
     }
     
-    func linkNewVoiceItAccount(success: @escaping ((_ showAlert: Bool) -> Void), failed: @escaping (() -> Void)) {
+    public func linkNewVoiceItAccount(success: @escaping ((_ showAlert: Bool) -> Void), failed: @escaping (() -> Void)) {
         let headers: HTTPHeaders = [
             "Content-Type": "application/json"
         ]
@@ -261,7 +261,7 @@ public class Service {
         return body as Data
     }
     
-    func identify(url: URL, appId: String, success: @escaping ((_ data: Data) -> Void), failed: @escaping (() -> Void)) {
+    public func identify(url: URL, appId: String, success: @escaping ((_ data: Data) -> Void), failed: @escaping (() -> Void)) {
         var r  = URLRequest(url: URL(string: "\(baseUrl)/users/identity")!)
         r.httpMethod = "POST"
         let boundary = "Boundary-\(UUID().uuidString)"
@@ -293,7 +293,7 @@ public class Service {
         task.resume()
     }
     
-    func textToSpeech(text: String, success: @escaping ((_ data: Data) -> Void), failed: @escaping (() -> Void)) {
+    public func textToSpeech(text: String, success: @escaping ((_ data: Data) -> Void), failed: @escaping (() -> Void)) {
         let parameters: Parameters = [
             "text": text
         ]
@@ -318,7 +318,7 @@ public class Service {
             })
     }
     
-    func speechToText(url: URL, success: @escaping ((_ data: Data) -> Void), failed: @escaping (() -> Void)) {
+    public func speechToText(url: URL, success: @escaping ((_ data: Data) -> Void), failed: @escaping (() -> Void)) {
         var r  = URLRequest(url: URL(string: "\(baseUrl)/stt")!)
         r.httpMethod = "POST"
         let boundary = "Boundary-\(UUID().uuidString)"
