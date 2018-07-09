@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		131A834820EFA92B0013E945 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 131A834720EFA92B0013E945 /* Service.swift */; };
 		133C08B420F3528F00BFED31 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133C08B320F3528F00BFED31 /* User.swift */; };
+		133C08B520F38B3600BFED31 /* AudioHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 131A834520EFA8500013E945 /* AudioHelper.swift */; };
 		2956CB8AC826644794F92C016BB4E349 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
 		2F681C815D609C1885406AC46A41CA42 /* Pods-MyLibrary_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C05F758AAF3EF36309311FDB64E58C4 /* Pods-MyLibrary_Tests-dummy.m */; };
 		39273CBF5A088DB02C0E843B9006289A /* Pods-MyLibrary_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1F6995543FA2E2227B61128C382C3C7F /* Pods-MyLibrary_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -88,16 +89,6 @@
 			name = Pod;
 			sourceTree = "<group>";
 		};
-		131A834620EFA8500013E945 /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				131A834520EFA8500013E945 /* AudioHelper.swift */,
-				131A834720EFA92B0013E945 /* Service.swift */,
-				133C08B320F3528F00BFED31 /* User.swift */,
-			);
-			path = Classes;
-			sourceTree = "<group>";
-		};
 		338D2CC0F2891A6375FAFD5A38E11786 /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -160,8 +151,10 @@
 		7EB34C113112E46AA1FA484D5350551E /* MyLibrary */ = {
 			isa = PBXGroup;
 			children = (
-				131A834620EFA8500013E945 /* Classes */,
 				FCCD726F4FAD103D78EF642D2A4D02CA /* ReplaceMe.swift */,
+				133C08B320F3528F00BFED31 /* User.swift */,
+				131A834520EFA8500013E945 /* AudioHelper.swift */,
+				131A834720EFA92B0013E945 /* Service.swift */,
 				08014B7374159B040DB859F023EE68B1 /* Pod */,
 				39D2AAFE4FB9A9DB41D74FB0F6C567A0 /* Support Files */,
 			);
@@ -295,6 +288,7 @@
 				CED96E4ADABD0A4A0207E77AC482AE5C /* MyLibrary-dummy.m in Sources */,
 				733E90700DA0BFD92384289DB000E7F9 /* ReplaceMe.swift in Sources */,
 				131A834820EFA92B0013E945 /* Service.swift in Sources */,
+				133C08B520F38B3600BFED31 /* AudioHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
