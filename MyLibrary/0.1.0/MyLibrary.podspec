@@ -37,7 +37,7 @@ by chappie.
 
   s.ios.deployment_target = '8.0'
 
-  s.source_files = 'MyLibrary/Classes/**/*'
+  s.source_files = 'MyLibrary/Classes/*'
   
   # s.resource_bundles = {
   #   'MyLibrary' => ['MyLibrary/Assets/*.png']
