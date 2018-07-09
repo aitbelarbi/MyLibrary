@@ -9,7 +9,7 @@
 import Foundation
 import ObjectMapper
 
-private class User: Mappable {
+public class User: Mappable {
     var id: String?
     var userId: String?
     var pushToken: String?
@@ -21,11 +21,11 @@ private class User: Mappable {
     var lastName: String?
     var firstName: String?
     
-    required init?(map: Map){
+    required public init?(map: Map){
         
     }
     
-    func mapping(map: Map) {
+    public func mapping(map: Map) {
         id <- map["id"]
         userId <- map["user_id"]
         pushToken <- map["push_token"]
