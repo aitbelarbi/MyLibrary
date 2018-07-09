@@ -9,7 +9,7 @@
 import Foundation
 import ObjectMapper
 
-class User: Mappable {
+public class User: Mappable {
     var id: String?
     var userId: String?
     var pushToken: String?

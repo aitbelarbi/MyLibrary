@@ -11,13 +11,13 @@ import AVFoundation
 import Alamofire
 import AlamofireObjectMapper
 
-protocol ServiceDelegate {
+public protocol ServiceDelegate {
     func playSound(data: Data, startListening: Bool)
     func showError()
     func serverRecordSuccess()
 }
 
-class Service {
+public class Service {
     static let INTEGRATION_BASE_URL = "https://hrp-gateway.int.inpoclab.com"
     static let PREPROD_BASE_URL = "https://hrp-gateway.preprod.inpoclab.com"
     static let PROD_BASE_URL = "https://hrp-gateway.inpoclab.com"

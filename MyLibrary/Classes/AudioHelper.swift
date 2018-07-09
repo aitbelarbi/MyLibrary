@@ -16,7 +16,7 @@
 import Foundation
 import AVFoundation
 
-protocol AudioHelperDelegate {
+public protocol AudioHelperDelegate {
     func recordingPermissionAllowed()
     func recordingPermissionFailed()
     func recordingStarted()
@@ -28,7 +28,7 @@ protocol AudioHelperDelegate {
     func soundFinishPlaying()
 }
 
-class AudioHelper: NSObject, AVAudioRecorderDelegate, ServiceDelegate, AVAudioPlayerDelegate {
+public class AudioHelper: NSObject, AVAudioRecorderDelegate, ServiceDelegate, AVAudioPlayerDelegate {
     
     private var recordingSession: AVAudioSession!
     private var audioRecorder: AVAudioRecorder!
