@@ -120,7 +120,7 @@ public class AudioHelper: NSObject, AVAudioRecorderDelegate, ServiceDelegate, AV
         }
     }
     
-    func audioRecorderDidFinishRecording(_ recorder: AVAudioRecorder, successfully flag: Bool) {
+    public func audioRecorderDidFinishRecording(_ recorder: AVAudioRecorder, successfully flag: Bool) {
         if !flag || isEnrollEnable {
             finishRecording(success: flag)
         }
